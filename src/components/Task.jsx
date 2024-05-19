@@ -1,17 +1,6 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Original Component
-// export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
-//   return (
-//     <div className="list-item">
-//       <label htmlFor="title" aria-label={title}>
-//         <input type="text" value={title} readOnly={true} name="title" />
-//       </label>
-//     </div>
-//   );
-// }
 
 export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
   return (
@@ -41,6 +30,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
           readOnly={true}
           name="title"
           placeholder="Input title"
+          style={{ backgroundColor: 'red' }}
         />
       </label>
 
@@ -58,6 +48,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
     </div>
   );
 }
+
 
 Task.propTypes = {
   /** Composition of the task */
